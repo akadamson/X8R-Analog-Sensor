@@ -616,9 +616,9 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C2" library="SparkFun-Capacitors" package="0603-CAP" value="1uf" x="5.08" y="12.7" rot="R270"/>
 <element name="C3" library="SparkFun-Capacitors" package="0603-CAP" value="1uf" x="5.715" y="8.255" rot="R180"/>
 <element name="C4" library="SparkFun-Capacitors" package="0603-CAP" value=".1uf" x="15.5575" y="1.905" rot="R180"/>
-<element name="ANALOG-IN" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="19.685" y="11.1125" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.0213" y="9.1313" size="0.4064" layer="25" ratio="10"/>
-<attribute name="VALUE" x="22.86" y="9.8425" size="1.27" layer="27" rot="R90"/>
+<element name="ANALOG-IN" library="SparkFun-Connectors" package="1X03" value="" x="19.685" y="8.5725" smashed="yes" rot="R90">
+<attribute name="NAME" x="18.1737" y="7.2263" size="0.4064" layer="25" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="22.86" y="7.3025" size="1.27" layer="27" rot="R90"/>
 </element>
 </elements>
 <signals>
@@ -651,14 +651,13 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="C3" pad="2"/>
 <contactref element="C1" pad="2"/>
 <contactref element="C4" pad="2"/>
-<contactref element="ANALOG-IN" pad="2"/>
-<via x="19.685" y="7.9375" extent="1-16" drill="0.6"/>
+<contactref element="ANALOG-IN" pad="3"/>
 </signal>
 <signal name="AIN">
 <contactref element="R2" pad="2"/>
 <contactref element="ANALOG-IN" pad="1"/>
-<wire x1="19.685" y1="11.1125" x2="18.0975" y2="9.525" width="0.4064" layer="1"/>
-<wire x1="18.0975" y1="9.525" x2="18.0975" y2="5.9925" width="0.4064" layer="1"/>
+<wire x1="18.0975" y1="5.9925" x2="18.0975" y2="6.985" width="0.4064" layer="1"/>
+<wire x1="18.0975" y1="6.985" x2="19.685" y2="8.5725" width="0.4064" layer="1"/>
 </signal>
 <signal name="VCC">
 <contactref element="IC1" pad="2"/>

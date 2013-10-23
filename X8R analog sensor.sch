@@ -3049,7 +3049,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="1uf"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value=".1uf"/>
-<part name="ANALOG-IN" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
+<part name="ANALOG-IN" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -3070,7 +3070,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="ISP" gate="G$1" x="195.58" y="124.46"/>
 <instance part="GND1" gate="1" x="66.04" y="66.04"/>
 <instance part="GND2" gate="1" x="81.28" y="96.52"/>
-<instance part="GND3" gate="1" x="177.8" y="66.04" rot="MR0"/>
+<instance part="GND3" gate="1" x="177.8" y="63.5" rot="MR0"/>
 <instance part="GND4" gate="1" x="99.06" y="60.96"/>
 <instance part="DEBUG" gate="G$1" x="187.96" y="101.6" rot="R180"/>
 <instance part="R2" gate="G$1" x="144.78" y="134.62"/>
@@ -3080,7 +3080,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="C3" gate="G$1" x="81.28" y="121.92"/>
 <instance part="GND6" gate="1" x="73.66" y="106.68"/>
 <instance part="C4" gate="G$1" x="121.92" y="124.46"/>
-<instance part="ANALOG-IN" gate="G$1" x="187.96" y="81.28" rot="R180"/>
+<instance part="ANALOG-IN" gate="G$1" x="187.96" y="78.74" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -3101,9 +3101,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="180.34" y1="78.74" x2="177.8" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="78.74" x2="177.8" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="ANALOG-IN" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="76.2" x2="177.8" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="76.2" x2="177.8" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="ANALOG-IN" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
