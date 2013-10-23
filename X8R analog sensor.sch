@@ -2630,61 +2630,6 @@ Standard 8.5x11 US Letter frame</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="MyLib">
-<packages>
-<package name="CAP-0603">
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
-<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<wire x1="0" y1="0.0305" x2="0" y2="-0.0305" width="0.5588" layer="21"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
-<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
-<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-<wire x1="0" y1="0.635" x2="-0.635" y2="0.635" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="0.635" x2="-0.635" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="-0.635" x2="0" y2="-0.635" width="0.127" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="CAP_POL">
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.016" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="-1" x2="2.4892" y2="-1.8542" width="0.254" layer="94" curve="-37.878202" cap="flat"/>
-<wire x1="-2.4669" y1="-1.8504" x2="0" y2="-1.0161" width="0.254" layer="94" curve="-37.376341" cap="flat"/>
-<text x="1.016" y="0.635" size="1.778" layer="95">&gt;NAME</text>
-<text x="1.016" y="-4.191" size="1.778" layer="96">&gt;VALUE</text>
-<rectangle x1="-2.253" y1="0.668" x2="-1.364" y2="0.795" layer="94"/>
-<rectangle x1="-1.872" y1="0.287" x2="-1.745" y2="1.176" layer="94"/>
-<pin name="+" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
-<pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="CAP_POL">
-<gates>
-<gate name="G$1" symbol="CAP_POL" x="-5.08" y="0"/>
-</gates>
-<devices>
-<device name="" package="CAP-0603">
-<connects>
-<connect gate="G$1" pin="+" pad="1"/>
-<connect gate="G$1" pin="-" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Passives">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find resistors, capacitors, inductors, test points, jumper pads, etc.&lt;br&gt;&lt;br&gt;
@@ -3091,8 +3036,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="ANALOGIN" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="LED" library="SparkFun-LED" deviceset="LED" device="0603" value="BLUE"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="330"/>
-<part name="C2" library="MyLib" deviceset="CAP_POL" device="" value="10uf 6.3V"/>
-<part name="C3" library="MyLib" deviceset="CAP_POL" device="" value="10uf 6.3V"/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="ISP" library="adafruit" deviceset="AVRISP" device="-6"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -3103,6 +3046,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="R2" library="SparkFun-Passives" deviceset="RESISTOR" device="PTH-1/6W"/>
 <part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="PTH-1/6W"/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="1uf"/>
+<part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="1uf"/>
+<part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3122,8 +3068,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </instance>
 <instance part="LED" gate="G$1" x="101.6" y="114.3"/>
 <instance part="R1" gate="G$1" x="101.6" y="124.46" rot="R90"/>
-<instance part="C2" gate="G$1" x="81.28" y="124.46"/>
-<instance part="C3" gate="G$1" x="55.88" y="121.92"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
 <instance part="ISP" gate="G$1" x="195.58" y="124.46"/>
@@ -3135,32 +3079,20 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="R2" gate="G$1" x="144.78" y="134.62"/>
 <instance part="R3" gate="G$1" x="137.16" y="127" rot="R90"/>
 <instance part="GND5" gate="1" x="137.16" y="116.84"/>
+<instance part="C2" gate="G$1" x="55.88" y="121.92"/>
+<instance part="C3" gate="G$1" x="81.28" y="121.92"/>
+<instance part="GND6" gate="1" x="73.66" y="106.68"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="GND" class="0">
 <segment>
-<wire x1="55.88" y1="111.76" x2="68.58" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="111.76" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="111.76" x2="91.44" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="GND"/>
-<wire x1="68.58" y1="127" x2="68.58" y2="111.76" width="0.1524" layer="91"/>
-<junction x="68.58" y="111.76"/>
-<pinref part="C2" gate="G$1" pin="-"/>
-<wire x1="81.28" y1="119.38" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
-<junction x="81.28" y="111.76"/>
-<pinref part="C3" gate="G$1" pin="-"/>
-<wire x1="55.88" y1="116.84" x2="55.88" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="121.92" x2="91.44" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="81.28" y1="111.76" x2="81.28" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="LED" gate="G$1" pin="C"/>
 <wire x1="81.28" y1="104.14" x2="81.28" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="109.22" x2="101.6" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="104.14" x2="81.28" y2="104.14" width="0.1524" layer="91"/>
-<junction x="81.28" y="104.14"/>
 </segment>
 <segment>
 <pinref part="S-PORT" gate="G$1" pin="1"/>
@@ -3190,6 +3122,25 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="119.38" x2="137.16" y2="121.92" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<wire x1="68.58" y1="127" x2="68.58" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="111.76" x2="68.58" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="55.88" y1="119.38" x2="55.88" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="119.38" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="121.92" x2="91.44" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="111.76" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="111.76" x2="73.66" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="73.66" y1="111.76" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="109.22" x2="73.66" y2="111.76" width="0.1524" layer="91"/>
+<junction x="68.58" y="111.76"/>
+<junction x="73.66" y="111.76"/>
+<junction x="81.28" y="111.76"/>
+</segment>
 </net>
 <net name="AIN" class="0">
 <segment>
@@ -3207,12 +3158,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <segment>
 <pinref part="IC1" gate="G$1" pin="VO"/>
 <wire x1="78.74" y1="134.62" x2="81.28" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="134.62" x2="91.44" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="134.62" x2="91.44" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="134.62" x2="91.44" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="+"/>
-<wire x1="81.28" y1="134.62" x2="81.28" y2="127" width="0.1524" layer="91"/>
-<junction x="81.28" y="134.62"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="91.44" y1="134.62" x2="101.6" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="134.62" x2="101.6" y2="129.54" width="0.1524" layer="91"/>
@@ -3220,6 +3168,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <junction x="91.44" y="134.62"/>
 <junction x="101.6" y="134.62"/>
 <label x="104.14" y="134.62" size="1.778" layer="95"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="127" x2="81.28" y2="134.62" width="0.1524" layer="91"/>
+<junction x="81.28" y="134.62"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
@@ -3312,12 +3263,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VI"/>
-<wire x1="55.88" y1="134.62" x2="58.42" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="+"/>
-<wire x1="55.88" y1="134.62" x2="55.88" y2="124.46" width="0.1524" layer="91"/>
-<junction x="55.88" y="134.62"/>
-<wire x1="55.88" y1="134.62" x2="45.72" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="134.62" x2="55.88" y2="134.62" width="0.1524" layer="91"/>
 <label x="48.26" y="134.62" size="1.778" layer="95"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="55.88" y1="134.62" x2="45.72" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="127" x2="55.88" y2="134.62" width="0.1524" layer="91"/>
+<junction x="55.88" y="134.62"/>
 </segment>
 </net>
 <net name="AIN-O" class="0">
