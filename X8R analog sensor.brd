@@ -126,10 +126,10 @@
 <text x="3.4925" y="13.335" size="0.6096" layer="21">S</text>
 <text x="3.4925" y="10.795" size="0.6096" layer="21">+</text>
 <text x="3.4925" y="8.255" size="0.8128" layer="21">-</text>
-<text x="16.51" y="8.255" size="1.016" layer="22" rot="MR0">X8R S.port-2-analog</text>
-<text x="16.51" y="6.985" size="0.8128" layer="22" rot="MR0">20131022-1</text>
-<dimension x1="0" y1="0" x2="0" y2="15.5575" x3="-2.54" y3="7.77875" textsize="1.778" layer="20"/>
-<dimension x1="0" y1="15.5575" x2="21.59" y2="15.5575" x3="10.795" y3="17.78" textsize="1.778" layer="20"/>
+<text x="17.78" y="8.255" size="0.8128" layer="22" font="vector" rot="MR0">X8R S.port-2-analog</text>
+<text x="17.78" y="6.985" size="0.6096" layer="22" font="vector" rot="MR0">20131022-1</text>
+<dimension x1="0" y1="0" x2="0" y2="15.5575" x3="-2.54" y3="7.77875" textsize="1.778" layer="49"/>
+<dimension x1="0" y1="15.5575" x2="21.59" y2="15.5575" x3="10.795" y3="17.78" textsize="1.778" layer="49"/>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">
